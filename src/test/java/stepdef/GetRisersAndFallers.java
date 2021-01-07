@@ -39,8 +39,14 @@ public class GetRisersAndFallers {
 	@When("^I click risers$")
 	public void i_click_risers() throws InterruptedException {
 		driver.findElement(By.cssSelector("#acceptCookie")).click();
+		
+		 
 		// Riser xpath
 		driver.findElement(By.xpath("/html/body/main/div/div/div[3]/div/div[4]/div[1]/ul/li[2]/a/strong")).click();
+		Thread.sleep(2000);
+		
+		// Obtains the URL of the first entry in the table i.e. the top riser
+		driver.findElement(By.xpath("/html/body/main/div/div/div[3]/div[4]/div[1]/div[2]/table/tbody/tr[1]/td[2]/a")).click();
 		Thread.sleep(2000);
 
 	}
